@@ -4,6 +4,7 @@ import { MisionComponent } from './mision/mision.component';
 import { VisionComponent } from './vision/vision.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { RouterLink } from '@angular/router';
 
 
 
@@ -15,7 +16,14 @@ import { FooterComponent } from './footer/footer.component';
     FooterComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterLink,
+  ],
+  exports: [
+    MisionComponent,
+    VisionComponent,
+    HeaderComponent,
+    FooterComponent
   ]
 })
 export class ComponentesModule { }
