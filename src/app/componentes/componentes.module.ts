@@ -4,7 +4,7 @@ import { MisionComponent } from './mision/mision.component';
 import { VisionComponent } from './vision/vision.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { RouterLink, RouterLinkActive, RouterModule } from '@angular/router';
 
 
 
@@ -18,7 +18,8 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   imports: [
     CommonModule,
     RouterLink,
-    RouterLinkActive
+    RouterLinkActive,
+    RouterModule
   ],
   exports: [
     MisionComponent,

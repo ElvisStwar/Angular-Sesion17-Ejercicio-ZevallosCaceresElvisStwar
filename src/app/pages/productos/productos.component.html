@@ -12,22 +12,17 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td colspan="2">Larry the Bird</td>
-        <td>@twitter</td>
+      <tr *ngFor="let producto of dataServiceProducto.datos">
+        <th scope="row">{{producto.id}}</th>
+        <td>{{producto.codigo}}</td>
+        <td>{{producto.descripcion}}</td>
+        <td>{{producto.precioC}}</td>
+        <td>{{producto.precioV}}</td>
+        <td>{{producto.ganancia}}</td>
+        <td>{{producto.existencia}}</td>
+        <td>
+            <a class="btn btn-primary" [routerLink]="['/detalle',producto.id]">Editar :D</a>
+        </td>
       </tr>
     </tbody>
   </table>
